@@ -15,13 +15,37 @@ Getting the absolute (Real) distance can be done by calibrating average depth wi
 
 **Build from source**
 
-> git clone --recurse git@github.com:RezkyKam50/Tesseract-VX.git
+```
+git clone --recurse git@github.com:RezkyKam50/Tesseract-VX.git
+cd Tesseract-VX
+git submodule update --init --recursive
+./configure.sh
+```
 
-> cd Tesseract-VX
+**Run**
 
-> git submodule update --init --recursive
 
-> ./configure.sh
+```
+chmod +x tsvx.sh
+./tsvx.sh
+```
+
+**Profiling**
+
+
+```
+chmod +x ./profiling/nsight_compute.sh && chmod +x ./profiling/nsight_sys.sh
+
+(Nsight Compute)
+./profiling/nsight_compute.sh
+
+OR
+
+(Nsight Systems)
+./profiling/nsight_sys.sh
+```
+
+
 
 # Citation
 
